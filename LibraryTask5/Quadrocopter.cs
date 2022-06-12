@@ -98,11 +98,10 @@ namespace Laba_5
         {
             if ((new Random()).NextDouble() < 0.001)
             {
-                repaired = false;
-                Broken.Invoke(this, position);
-                velocity = new Vector3();
                 Stop();
                 Down();
+                repaired = false;
+                Broken.Invoke(this, position);
             }
             if(position.z<0)
             {
